@@ -105,14 +105,14 @@ function App() {
           <Trophy className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
         </div>
 
-        <div className="mb-6 sm:mb-8 flex flex-col sm:flex-row gap-2 sm:gap-4">
-          <form onSubmit={addPlayer} className="flex-1 flex flex-col sm:flex-row gap-2 sm:gap-4">
+        <div className="mb-6 sm:mb-8 flex flex-wrap gap-2 sm:gap-4">
+          <form onSubmit={addPlayer} className="flex flex-wrap gap-2 sm:gap-4">
             <input
               type="text"
               value={newPlayerName}
               onChange={(e) => setNewPlayerName(e.target.value)}
-              placeholder="Nome do jogador"
-              className="flex-1 px-4 py-2 rounded-lg border border-gray-300 bg-white/90 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Nome do skatista"
+              className="flex-1 text-3xl px-4 py-2 rounded-lg border border-gray-300 bg-white/90 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <button
               type="submit"
@@ -142,7 +142,7 @@ function App() {
           {players.map((player, index) => (
             <div
               key={player.id}
-              className={`bg-white/90 backdrop-blur-sm rounded-lg p-4 sm:p-6 shadow-md flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 ${
+              className={`bg-white/90 text-3xl backdrop-blur-sm rounded-lg p-4 sm:p-6 shadow-md flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 ${
                 isPlayerOut(player) ? 'bg-red-50/90' : ''
               } transform transition-all duration-200 ${
                 isShuffling ? 'scale-[0.98] opacity-90' : 'scale-100 opacity-100'
@@ -151,9 +151,9 @@ function App() {
               <div className="flex items-center justify-between sm:flex-1">
                 <div className="flex items-center gap-2 flex-wrap">
                   <span className="text-gray-600">#{index + 1}</span>
-                  <span className="font-semibold text-base sm:text-lg">{player.name}</span>
+                  <span className="font-semibold px-1 text-3xl">{player.name}</span>
                   {isPlayerOut(player) && (
-                    <span className="text-red-500 font-semibold text-sm sm:text-base">
+                    <span className="text-red-500 font-semibold text-3xl sm:text-base">
                       Eliminado!
                     </span>
                   )}
@@ -167,12 +167,12 @@ function App() {
                 </button>
               </div>
               <div className="flex items-center justify-between gap-4">
-                <div className="flex gap-1 sm:gap-2">
+                <div className="flex gap-2 sm:gap-3">
                   {player.letters.map((letterObj, letterIndex) => (
                     <button
                       key={letterIndex}
                       onClick={() => toggleLetter(player.id, letterIndex)}
-                      className={`w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded border-2 text-sm sm:text-base
+                      className={`w-12 h-12 flex items-center justify-center rounded border-2 text-3xl sm:text-base
                         ${letterObj.failed 
                           ? 'border-red-500 bg-red-50 text-red-500' 
                           : 'border-gray-300 hover:border-gray-400 bg-white'
