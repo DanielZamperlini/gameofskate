@@ -93,7 +93,7 @@ function App() {
     <div 
       className="min-h-screen py-4 sm:py-8 px-2 sm:px-4 bg-cover bg-center bg-fixed"
       style={{
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://images.unsplash.com/photo-1520045892732-304bc3ac5d8e?auto=format&fit=crop&w=2000&q=80")',
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/controlegame.png")',
       }}
     >
       <div className="max-w-3xl mx-auto">
