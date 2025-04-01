@@ -93,7 +93,7 @@ function App() {
     <div 
       className="min-h-screen py-4 sm:py-8 px-2 sm:px-4 bg-cover bg-center bg-fixed"
       style={{
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/controlegame.png")',
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("controlegame.png")',
       }}
     >
       <div className="max-w-3xl mx-auto">
