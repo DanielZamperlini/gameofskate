@@ -105,21 +105,21 @@ function App() {
           <Trophy className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
         </div>
 
-        <div className="mb-6 sm:mb-8 flex flex-wrap gap-2 sm:gap-4">
-          <form onSubmit={addPlayer} className="flex flex-wrap gap-2 sm:gap-4">
+        <div className="mb-6 sm:mb-8 flex justify-start flex-wrap gap-2 sm:gap-4">
+          <form onSubmit={addPlayer} className="flex flex-1 gap-2 sm:gap-4">
             <input
               type="text"
               value={newPlayerName}
               onChange={(e) => setNewPlayerName(e.target.value)}
               placeholder="Nome do skatista"
-              className="flex-1 text-3xl px-4 py-2 rounded-lg border border-gray-300 bg-white/90 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="text-xl px-2 py-1 rounded-lg border border-gray-300 bg-white/90 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <button
               type="submit"
-              className="px-4 sm:px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors flex items-center justify-center sm:justify-start gap-2 whitespace-nowrap"
+              className="px-3 sm:px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors flex items-center justify-center sm:justify-start gap-2 whitespace-nowrap"
             >
               <UserPlus className="w-5 h-5" />
-              <span>Adicionar Jogador</span>
+              <span>OK</span>
             </button>
           </form>
           
